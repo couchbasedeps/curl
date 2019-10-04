@@ -39,7 +39,6 @@ int socketpair(int domain, int type, int protocol, curl_socket_t socks[2])
     struct sockaddr addr;
   } a;
   curl_socket_t listener;
-  int e;
   socklen_t addrlen = sizeof(a.inaddr);
   int reuse = 1;
   (void)domain;

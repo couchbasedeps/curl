@@ -34,7 +34,7 @@ http
 Variable using base64
 </name>
 <command>
---variable moby="Call me Ishmael" --variable what=%b64[white-whale]b64% --expand-url "http://%HOSTIP:%HTTPPORT/{{moby:b64}}/{{what:d64}}/%TESTNUMBER"
+--variable moby="Call me Ishmael" --variable what=%b64[white-whale]b64% --expand-url "http://%HOSTIP:%HTTPPORT/{{moby:b64}}/{{what:64dec}}/%TESTNUMBER"
 </command>
 </client>
 

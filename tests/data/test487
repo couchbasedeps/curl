@@ -31,10 +31,10 @@ Funny-head: yesyes
 http
 </server>
 <name>
-Variable using d64 with bad base64
+Variable using 64dec with bad base64
 </name>
 <command>
---variable what=not-base64-data --expand-url "http://%HOSTIP:%HTTPPORT/{{what:d64}}/%TESTNUMBER" -g
+--variable what=not-base64-data --expand-url "http://%HOSTIP:%HTTPPORT/{{what:64dec}}/%TESTNUMBER" -g
 </command>
 </client>
 
@@ -42,7 +42,7 @@ Variable using d64 with bad base64
 # Verify data after the test has been "shot"
 <verify>
 <protocol crlf="yes">
-GET /[d64-fail]/%TESTNUMBER HTTP/1.1
+GET /[64dec-fail]/%TESTNUMBER HTTP/1.1
 Host: %HOSTIP:%HTTPPORT
 User-Agent: curl/%VERSION
 Accept: */*

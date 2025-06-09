@@ -347,7 +347,7 @@ static void read_instructions(void)
       if(p) {
         *p = 0;
         if(!strncmp("A: ", buf, 3)) {
-          rc = inet_pton(AF_INET, &buf[3], ipv4_pref);
+          rc = curlx_inet_pton(AF_INET, &buf[3], ipv4_pref);
         }
         else if(!strncmp("AAAA: ", buf, 6)) {
           char *p6 = &buf[6];
@@ -357,7 +357,7 @@ static void read_instructions(void)
               *pt = 0;
             p6++;
           }
-          rc = inet_pton(AF_INET6, p6, ipv6_pref);
+          rc = curlx_inet_pton(AF_INET6, p6, ipv6_pref);
         }
         else {
           rc = 0;
